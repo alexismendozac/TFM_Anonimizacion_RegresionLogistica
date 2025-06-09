@@ -1,0 +1,12 @@
+# Ignorar entorno virtual
+venv/
+__pycache__/
+*.pyc
+
+# Ignorar dataset pesado
+dataset/anonimizacion_datos.csv
+
+# Archivos temporales / de entorno
+.vscode/
+*.log
+*.tmp
