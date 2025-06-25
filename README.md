@@ -92,7 +92,7 @@ dataset/anonimizacion_datos.csv
 
 ```mermaid
 graph TD
-    A[📁 Dataset original (PaySim1)] --> B[🔐 Seudonimización (SHA-256)]
+    A[Dataset original (PaySim1)] --> B[ Seudonimización (SHA-256)]
     B --> C[🔒 K-Anonimato (k=10)]
     C --> D[🎯 L-Diversidad (l=2)]
     D --> E[🧪 Privacidad Diferencial (ε=2.0)]
