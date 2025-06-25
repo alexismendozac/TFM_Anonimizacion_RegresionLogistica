@@ -92,20 +92,21 @@ dataset/anonimizacion_datos.csv
 
 ```mermaid
 graph TD
-    A[📁 Dataset PaySim1] --> B[🛡️ Seudonimización (SHA-256)]
+    A[📁 Dataset original (PaySim1)] --> B[🔐 Seudonimización (SHA-256)]
     B --> C[🔒 K-Anonimato (k=10)]
     C --> D[🎯 L-Diversidad (l=2)]
-    D --> E[🧪 Evaluación de privacidad (ε=2.0)]
-    E --> F[📊 Preprocesamiento RL]
-    F --> G[📉 Entrenamiento RL]
-    G --> H[📜 Evaluación GDPR]
-    H --> I[🎓 Visualización e Interpretación]
+    D --> E[🧪 Privacidad Diferencial (ε=2.0)]
+    E --> F[⚙️ Preprocesamiento para RL]
+    F --> G[📉 Entrenamiento del modelo de Regresión Logística]
+    G --> H[📊 Evaluación del modelo]
+    H --> I[🧾 Evaluación de cumplimiento GDPR]
 
     Preprocesamiento RL: OneHotEncoding, normalización, eliminación de outliers, split 80/20.
 
     Entrenamiento RL: Scikit-learn / statsmodels, penalización, AUC, matriz de confusión.
 
     Evaluación GDPR: simulación de reidentificación y análisis post-anonimización.
+
 ---
 ### 📈 Resultados Principales: Regresión Logística
 
@@ -167,7 +168,7 @@ Y explorar los notebooks dentro de la carpeta `notebooks/`.
 ### 🌐 Presentación Interactiva
 
 Accede a la presentación de tu Trabajo Final de Máster (TFM) aquí:
-🔗 TFM Anonimización y Regresión Logística (Genially)
+🔗 [TFM Anonimización y Regresión Logística (Genially)](https://view.genially.com/68598996c8dfe8efb400f768/interactive-content-tfmanonimizacion)
 
 ---
 
