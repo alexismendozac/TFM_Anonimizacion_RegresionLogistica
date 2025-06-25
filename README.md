@@ -26,7 +26,7 @@ TFM_Anonimizacion_RegresionLogistica/
 │
 ├── notebooks/                       # Análisis y visualización en Jupyter
 │   ├── notebook_analisis_privacidad-utilidad_anonimizacion.ipynb
-│   ├── notebook_deteccion_fraude_basico.ipynb
+│   ├── notebook_deteccion_fraude_basico.ipynbgit add .git add .
 │   └── notebook_EDA_anonimizacion_LLMs.ipynb
 │
 ├── src/                             # Scripts de análisis y modelos
@@ -84,7 +84,28 @@ dataset/anonimizacion_datos.csv
 
 - `comparativa_modelos_RL.py`  
   Comparación entre modelos entrenados con datos originales vs. anonimizados.
+---
 
+## 🧠 Arquitectura de la Solución – Regresión Logística
+
+### 🔁 Pipeline de Procesamiento
+
+```mermaid
+graph TD
+    A[📁 Dataset PaySim1] --> B[🛡️ Seudonimización (SHA-256)]
+    B --> C[🔒 K-Anonimato (k=10)]
+    C --> D[🎯 L-Diversidad (l=2)]
+    D --> E[🧪 Evaluación de privacidad (ε=2.0)]
+    E --> F[📊 Preprocesamiento RL]
+    F --> G[📉 Entrenamiento RL]
+    G --> H[📜 Evaluación GDPR]
+    H --> I[🎓 Visualización e Interpretación]
+
+    Preprocesamiento RL: OneHotEncoding, normalización, eliminación de outliers, split 80/20.
+
+    Entrenamiento RL: Scikit-learn / statsmodels, penalización, AUC, matriz de confusión.
+
+    Evaluación GDPR: simulación de reidentificación y análisis post-anonimización.
 ---
 ### 📈 Resultados Principales: Regresión Logística
 
@@ -141,6 +162,12 @@ jupyter notebook
 ```
 
 Y explorar los notebooks dentro de la carpeta `notebooks/`.
+
+---
+### 🌐 Presentación Interactiva
+
+Accede a la presentación de tu Trabajo Final de Máster (TFM) aquí:
+🔗 TFM Anonimización y Regresión Logística (Genially)
 
 ---
 
