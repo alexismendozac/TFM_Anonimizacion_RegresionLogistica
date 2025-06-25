@@ -90,7 +90,7 @@ dataset/anonimizacion_datos.csv
 
 ### 🔁 Pipeline de Procesamiento
 
- ```mermaid
+
  graph TD
  A[Dataset original (PaySim1)] --> B[Seudonimización (SHA-256)]
  B --> C[K-Anonimato (k=10)]
@@ -106,7 +106,7 @@ dataset/anonimizacion_datos.csv
     Entrenamiento RL: Scikit-learn / statsmodels, penalización, AUC, matriz de confusión.
 
     Evaluación GDPR: simulación de reidentificación y análisis post-anonimización.
- ```
+
  
 ---
 ### 📈 Resultados Principales: Regresión Logística
