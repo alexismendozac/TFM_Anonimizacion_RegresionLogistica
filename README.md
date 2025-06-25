@@ -90,7 +90,7 @@ dataset/anonimizacion_datos.csv
 
 ### 🔁 Pipeline de Procesamiento
 
-```mermaid
+
 graph TD
     A[Dataset original (PaySim1)] --> B[ Seudonimización (SHA-256)]
     B --> C[🔒 K-Anonimato (k=10)]
