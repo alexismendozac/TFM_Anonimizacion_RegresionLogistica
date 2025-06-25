@@ -107,7 +107,8 @@ dataset/anonimizacion_datos.csv
     Entrenamiento RL: Scikit-learn / statsmodels, penalización, AUC, matriz de confusión.
 
     Evaluación GDPR: simulación de reidentificación y análisis post-anonimización.
-
+ ```
+ 
 ---
 ### 📈 Resultados Principales: Regresión Logística
 
