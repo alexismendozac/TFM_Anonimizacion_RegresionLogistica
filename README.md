@@ -92,14 +92,14 @@ dataset/anonimizacion_datos.csv
 
 
 graph TD
-    A[Dataset original (PaySim1)] --> B[ Seudonimización (SHA-256)]
-    B --> C[🔒 K-Anonimato (k=10)]
-    C --> D[🎯 L-Diversidad (l=2)]
-    D --> E[🧪 Privacidad Diferencial (ε=2.0)]
-    E --> F[⚙️ Preprocesamiento para RL]
-    F --> G[📉 Entrenamiento del modelo de Regresión Logística]
-    G --> H[📊 Evaluación del modelo]
-    H --> I[🧾 Evaluación de cumplimiento GDPR]
+    A[Dataset original PaySim1] --> B[Seudonimización SHA-256]
+    B --> C[K-Anonimato k=10]
+    C --> D[L-Diversidad l=2]
+    D --> E[Privacidad Diferencial e>=0.2]
+    E --> F[Preprocesamiento para RL]
+    F --> G[Entrenamiento modelo Regresión Logística]
+    G --> H[Evaluación del modelo]
+    H --> I[Evaluación cumplimiento GDPR]
 
     Preprocesamiento RL: OneHotEncoding, normalización, eliminación de outliers, split 80/20.
 
