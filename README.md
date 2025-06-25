@@ -5,6 +5,18 @@ Este repositorio contiene el desarrollo completo de un Trabajo de Fin de Máster
 
 ---
 
+
+### 📄 Documento del Trabajo Final de Máster
+
+El informe completo del TFM está disponible en el siguiente enlace:
+
+📎 [TFM - Anonimización y Cumplimiento del GDPR con Modelos LLM](https://drive.google.com/drive/folders/1bU1SSvt7IW3EzleY2cjp6QdY42P9pYrP)
+
+Incluye fundamentos legales, técnicas avanzadas de protección de datos (k-anonimato, l-diversidad, privacidad diferencial) y evaluación empírica con modelos de clasificación (Random Forest, XGBoost, Regresión Logística).
+
+
+---
+
 ### 📂 Estructura del Proyecto
 
 ```
@@ -74,7 +86,29 @@ dataset/anonimizacion_datos.csv
   Comparación entre modelos entrenados con datos originales vs. anonimizados.
 
 ---
+### 📈 Resultados Principales: Regresión Logística
 
+Comparación entre el modelo entrenado con datos originales vs. datos anonimizados:
+
+| Métrica      | Original | Anonimizado | Impacto  | Interpretación            |
+|-------------|----------|-------------|----------|---------------------------|
+| Precisión   | 99.91%   | 99.91%      | ±0.00%   | ✅ Estabilidad total       |
+| Sensibilidad| 39.45%   | 41.68%      | +2.23%   | 🟢 Ligera mejora inesperada |
+| F1-Score    | 52.46%   | 54.86%      | +2.40%   | 🟢 Optimización emergente |
+
+**🟢 Fortalezas:**
+
+- *Mejora tras anonimización*: Se observa un efecto de regularización implícita.
+- *Interpretabilidad superior*: Modelo simple y explicativo.
+- *Cumplimiento normativo*: Buena base para auditorías con GDPR.
+
+**🔴 Limitaciones:**
+
+- *Sensibilidad aún baja*: No es ideal como solución única en detección de fraude.
+- *Modelo lineal*: Menor capacidad para patrones complejos comparado con RF o XGBoost.
+
+
+---
 ### 🛠️ Instalación y entorno
 
 1. Clona el repositorio:

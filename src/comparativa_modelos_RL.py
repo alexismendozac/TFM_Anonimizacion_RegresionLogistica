@@ -134,6 +134,7 @@ def evaluar_impacto_k_anonimato(df, columnas_modelo, columna_objetivo='isFraud',
             X_anon, y_anon, test_size=test_size, random_state=random_state
         )
         
+        ##
         #modelo_anon = RandomForestClassifier(n_estimators=100, random_state=random_state)
         modelo_anon = LogisticRegression(max_iter=1000, random_state=random_state)
         modelo_anon.fit(X_train_anon, y_train_anon)

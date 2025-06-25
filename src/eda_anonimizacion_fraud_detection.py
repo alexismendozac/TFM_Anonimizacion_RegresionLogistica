@@ -59,16 +59,23 @@ def mostrar_info_basica(df):
     print("\nValores nulos por columna:")
     display(df.isnull().sum())
 
-def visualizar_valores_nulos(df):
+def visualizar_valores_nulos(df, n_muestra=1000):
     """
-    Visualiza los valores nulos en el DataFrame.
+    Visualiza los valores nulos en una muestra del DataFrame.
     
     Args:
         df (pd.DataFrame): DataFrame a analizar
+        n_muestra (int): Número de filas a mostrar en el heatmap
     """
+    #plt.figure(figsize=(12, 6))
+    #sns.heatmap(df.isnull(), cbar=False, yticklabels=False, cmap='viridis')
+    #plt.title('Mapa de calor de valores nulos')
+    #plt.tight_layout()
+    #plt.show()
+    muestra = df.head(n_muestra)
     plt.figure(figsize=(12, 6))
-    sns.heatmap(df.isnull(), cbar=False, yticklabels=False, cmap='viridis')
-    plt.title('Mapa de calor de valores nulos')
+    sns.heatmap(muestra.isnull(), cbar=False, yticklabels=False, cmap='viridis')
+    plt.title(f'Mapa de calor de valores nulos (primeras {n_muestra} filas)')
     plt.tight_layout()
     plt.show()
 
